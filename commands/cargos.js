@@ -13,8 +13,18 @@ module.exports = {
       .setColor(cor_da_embed)
       .setDescription(`Para desbloquear as salas de bate-papo referente a cada linguem você deve reagir de acordo com cada linguagem! 
         \n 
-        \n 
-        :screwdriver:
+        🔓 <@&884427721663475752>
+        🌐 <@&885174702623051847>
+        💻 <@&885223175556849755>
+        📱 <@&885182555991719956>
+        🐍 <@&885216543099740191>
+        🐘 <@&884497675205083147>
+        💡 <@&884494832058376234>
+        📅 <@&885222661150638111>
+        🛠️ <@&884497783543984189>
+        🐦 <@&884497587384754206>
+
+        Se inscreva no nosso canal do YouTube: https://www.youtube.com/c/EvenusFI
         `)
 
     let embed_2 = new Discord.MessageEmbed()
@@ -45,8 +55,34 @@ module.exports = {
       collector.on('collect', (reaction, user) => {
         // in case you want to do something when someone reacts with 👍
         if (reaction.emoji.name == "🔓") {
-          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.registrado);
-          reaction.message.guild.members.cache.get(user.id).roles.remove(cargos.naoRegistrado);
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.programador);
+        }
+        if (reaction.emoji.name == "🌐") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.web);
+        }
+        if (reaction.emoji.name == "💻") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.desktop);
+        }
+        if (reaction.emoji.name == "📱") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.mobile);
+        }
+        if (reaction.emoji.name == "🐍") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.python);
+        }
+        if (reaction.emoji.name == "🐘") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.php);
+        }
+        if (reaction.emoji.name == "💡") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.js);
+        }
+        if (reaction.emoji.name == "📅") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.sql);
+        }
+        if (reaction.emoji.name == "🛠️") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.arduino);
+        }
+        if (reaction.emoji.name == "🐦") {
+          reaction.message.guild.members.cache.get(user.id).roles.add(cargos.flutter);
         }
       });
     }else{
